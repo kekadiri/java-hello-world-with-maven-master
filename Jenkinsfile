@@ -22,5 +22,10 @@ pipeline{
                bat 'mvn package'
             }
         }
+        stage('deploy') {
+            steps {
+                echo 'deploying'
+            }
+        }
     }
 }
