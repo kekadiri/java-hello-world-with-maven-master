@@ -45,7 +45,8 @@
                     <artifactId>jacoco-maven-plugin</artifactId>
                     <version>0.8.4</version>
                 </plugin>
-				</pluginManagement>
+		</plugins>
+	</pluginManagement>
                 <executions>
                     <execution>
                         <phase>package</phase>
