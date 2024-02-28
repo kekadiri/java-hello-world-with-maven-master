@@ -30,9 +30,9 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>2.1</version>
         <configuration>
-                  <source>7</source>
+                 <source>7</source>
                  <target>7</target>
-         </configuration>
+        </configuration>
                 <executions>
                     <execution>
                         <phase>package</phase>
