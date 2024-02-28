@@ -33,6 +33,16 @@
                  <source>7</source>
                  <target>7</target>
         </configuration>
+		<plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.6.0.1398</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>0.8.4</version>
+                </plugin>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -52,4 +62,57 @@
             </plugin>
         </plugins>
     </build>
+	<profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>
+                    http://54.237.244.28:9000
+                </sonar.host.url>
+                <sonar.login>squ_b692f6e97b675a7f87d268992b2c0e58ee6aa2ad</sonar.login>
+                 </properties>
+        </profile>
+        <profile>
+            <id>coverage</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>prepare-agent</id>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>report</id>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+<distributionManagement>
+    <repository>
+      <id>nexus-Repo</id>
+      <url>http://18.215.161.44:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus-Repo</id>
+      <url>http://18.215.161.44:8081/repository/maven-snapshots//</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
