@@ -1,11 +1,11 @@
 pipeline {
     agent any
         stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/kekadiri/java-hello-world-with-maven-master.git'
-            }
-        }
+       // stage('Checkout') {
+         //   steps {
+           //     git 'https://github.com/kekadiri/java-hello-world-with-maven-master.git'
+            //}
+        //}
             stage('build') {
                 steps {
                     sh 'mvn clean package'
