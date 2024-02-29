@@ -26,7 +26,7 @@ pipeline {
                     groupId: 'pom.org.springframework',
                     version: 'pom.0.2.1',
                     repository: 'maven-releases',
-                    credentialsId: 'nexus',
+                    credentialsId: 'nexus-Repo',
                     artifacts: [
                         [artifactId: 'jb-hello-world-maven',
                          file: 'target/jb-hello-world-maven-0.2.1.jar',
