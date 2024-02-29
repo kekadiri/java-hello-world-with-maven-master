@@ -24,12 +24,12 @@ pipeline {
                     protocol: 'http',
                     nexusUrl: 'http://54.91.254.146:8081',
                     groupId: 'pom.org.springframework',
-                    version: 'pom.0.2.0',
+                    version: 'pom.0.2.1',
                     repository: 'maven-releases',
                     credentialsId: 'nexus',
                     artifacts: [
                         [artifactId: 'jb-hello-world-maven',
-                         file: 'target/jb-hello-world-maven-0.2.0.jar',
+                         file: 'target/jb-hello-world-maven-0.2.1.jar',
                          type: 'jar']
                     ]
                     )
