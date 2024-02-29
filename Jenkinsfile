@@ -22,7 +22,7 @@ pipeline {
                 nexusArtifactUploader(
                     nexusVersion: 'nexus3',
                     protocol: 'http',
-                    nexusUrl: 'http://54.91.254.146:8081',
+                    nexusUrl: '54.91.254.146:8081',
                     groupId: 'pom.org.springframework',
                     version: 'pom.0.2.1',
                     repository: 'maven-releases',
