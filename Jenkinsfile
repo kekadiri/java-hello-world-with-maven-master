@@ -29,7 +29,7 @@ pipeline {
                     credentialsId: 'nexus',
                     artifacts: [
                         [artifactId: 'jb-hello-world-maven',
-                         file: '/target/jb-hello-world-maven-0.2.0.jar',
+                         file: 'target/jb-hello-world-maven-0.2.0.jar',
                          type: 'jar']
                     ]
                     )
